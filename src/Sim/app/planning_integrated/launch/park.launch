@@ -1,3 +1,21 @@
+<!-- 
+  pkg:    节点所属的ros功能包
+  type:   执行文件的名称
+  name:   运行时节点的名称
+  output: 节点的输出类型（如：output="screen" 表示节点信息输出到终端）
+  args:   传递给节点的任何命令行参数
+  
+  arg: launch文件内部的局部变量，仅限于launch文件使用
+    调用：通过$(arg arg-name)直接调用arg参数对应的value
+    <param name="foo" value="$(arg arg-name)"/>
+
+  rosparam: 加载参数文件中的多个参数
+  param: 设置ros系统运行中的参数，存储到参数服务器
+    name: 参数名， type: 参数类型， value: 参数值
+
+  remap: 重映射ros计算图资源的命名、
+    from: 原命名， to: 映射后的命名
+ -->
 <launch>
   <arg name="arena_info_static_topic" value="/arena_info_static" />
   <arg name="arena_info_dynamic_topic" value="/arena_info_dynamic" />
